@@ -1,26 +1,53 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { createRoot } from 'react-dom/client';
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Link,
+} from "react-router-dom";
+import Home from './components/Home';
+import NOTFOUND from './components/NOTFOUND';
+import LandingPage from './components/LandingPage';
+import Login from './components/Registering/Login';
+import SignUp from './components/Registering/SignUp';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const router = createBrowserRouter([
+  {
+    path : '/',
+    element:
+      <LandingPage/>
+  },
+  {
+    path: "home/:id",
+    element:
+    <Home id={':id'}/>
+  },
+  {
+    path : ":path",
+    element : 
+    <>
+      <NOTFOUND rout=':path'/>
+    </>
+  },{
+    path : "login",
+    element : 
+      <Login/>
+  },{
+    path : "signup",
+    element :
+    <SignUp/>
+  }
+])
+
+const App:React.FC = () =>{
+  return(
+    <>
+      <div className='dark:bg-[#121212] h-screen w-screen select-none'>
+        <RouterProvider router={router} />
+      </div>
+    </>
+  )
 }
 
 export default App;
