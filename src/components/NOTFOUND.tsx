@@ -9,12 +9,16 @@ const NOTFOUND:React.FC<currentProps> = (props) => {
     const {path} = useParams();
   return (
     <div className=' h-screen w-screen flex items-center 
-    justify-center'> 
-      <div className=' text-5xl flex gap-4 text-white'>
-        <span>404</span>
-        <span>path - </span>
-        <span>{path}</span>
-        <span>NOT FOUND</span>
+     flex-col'> 
+    <div>
+      <img src="https://i.postimg.cc/4yK7wfPY/error-404-1-dark.png" alt="" />
+    </div>
+      <div className=' text-[1.2rem] flex gap-4 text-white'>
+        <p className=' w-fit text-center px-5'>404 : The page you are looking for don't exit</p>
+      </div>
+      <div className=' text-2xl max-sm:text-md fixed bottom-20 flex gap-2'>
+        <span className=' text-indigo-400'>Rout -</span>
+        <span className=' text-orange-600 '> {path}</span>
       </div>
     </div>
   )

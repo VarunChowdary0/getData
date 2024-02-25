@@ -14,7 +14,10 @@ const Home:React.FC<id> = (props) => {
        max-sm:text-2xl hover:cursor-pointer
       clear-start flex gap-4'>
         <span className=' hover:scale-110 transition-all'>Welcome</span>
-        <span className=' hover:scale-110 transition-all text-[#fff]'>" {id} "</span>
+        <span className=' hover:scale-110 transition-all dark:text-[#fff]'>" {id} "</span>
+        </div>
+        <div className=' fixed bottom-28 text-sky-500'>
+          <a href="/exeed_demo">Demo Page</a>
         </div>
     </div>
   )

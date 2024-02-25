@@ -11,6 +11,7 @@ import NOTFOUND from './components/NOTFOUND';
 import LandingPage from './components/LandingPage';
 import Login from './components/Registering/Login';
 import SignUp from './components/Registering/SignUp';
+import DemoPage from './components/DemoPage';
 
 const router = createBrowserRouter([
   {
@@ -37,13 +38,19 @@ const router = createBrowserRouter([
     path : "signup",
     element :
     <SignUp/>
+  },{
+    path:"exeed_demo",
+    element:
+    <DemoPage/>
   }
 ])
 
 const App:React.FC = () =>{
   return(
     <>
-      <div className='dark:bg-[#121212] h-screen w-screen select-none'>
+      <div className='dark:bg-[#121212] dark:text-white
+       bg-[#ebebeb]
+       h-screen w-screen select-none'>
         <RouterProvider router={router} />
       </div>
     </>
