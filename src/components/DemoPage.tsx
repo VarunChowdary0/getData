@@ -20,7 +20,8 @@ const DemoPage:React.FC = () => {
          p-5 overflow-y-auto'>
                 {
                     Data.map((ele,idx)=>
-                    <div onClick={()=>{redirect_to(ele.UUID)}} key={"snorev_"+idx} className=' min-h-[100px] w-[90%] max-sm:w-[100%] 
+                    <div onClick={()=>{redirect_to(ele.UUID)}} key={"snorev_"+idx}
+                     className='  w-[90%] max-sm:w-[100%] h-fit max-sm:h-[300px]
                     rounded-lg bg-white shadow-md transition-all hover:shadow-lg 
                     hover:cursor-pointer active:scale-95 
                    dark:bg-[#282828] p-4 relative'>
