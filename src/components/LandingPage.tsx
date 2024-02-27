@@ -2,10 +2,14 @@ import React, { useEffect } from 'react'
 
 const LandingPage = () => {
   useEffect(()=>{
-    window.location.href = "/exeed_demo"
+    setTimeout(()=>{
+      window.location.href = "/home"
+    },2000)
   })
   return (
-    <div>LandingPage</div>
+    <div className=' w-full h-fit '>
+      
+    </div>
   )
 }
 

@@ -12,6 +12,7 @@ import LandingPage from './components/LandingPage';
 import Login from './components/Registering/Login';
 import SignUp from './components/Registering/SignUp';
 import DemoPage from './components/DemoPage';
+import LabSpacePage from './components/LabSpacePage';
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
     path:"exeed_demo",
     element:
     <DemoPage/>
+  },{
+    path : "/labspace/:uuid",
+    element:
+    <LabSpacePage uuid=':uuid'/>
   }
 ])
 
@@ -50,7 +55,7 @@ const App:React.FC = () =>{
     <>
       <div className='dark:bg-[#121212] dark:text-white
        bg-[#ebebeb]
-       h-screen w-screen select-none'>
+       min-h-screen h-fit w-full select-none'>
         <RouterProvider router={router} />
       </div>
     </>

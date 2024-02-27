@@ -13,7 +13,7 @@ const NOTFOUND:React.FC<currentProps> = (props) => {
     <div>
       <img src="https://i.postimg.cc/4yK7wfPY/error-404-1-dark.png" alt="" />
     </div>
-      <div className=' text-[1.2rem] flex gap-4 text-white'>
+      <div className=' text-[1.2rem] flex gap-4 dark:text-white'>
         <p className=' w-fit text-center px-5'>404 : The page you are looking for don't exit</p>
       </div>
       <div className=' text-2xl max-sm:text-md fixed bottom-20 flex gap-2'>
