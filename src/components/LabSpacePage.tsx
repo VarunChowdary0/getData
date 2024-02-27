@@ -18,7 +18,7 @@ const LabSpacePage:React.FC<currentProps> = (props) => {
   return (
     <div className=' w-full flex flex-col p-10 gap-5'>
       <div className=''>
-        <p className=' text-4xl mb-10'>Title</p>
+        <p className=' text-4xl mb-10'>{Data?.Title}</p>
       </div>
 	{
 		Data?.Question_Infos.map((ele,idx)=>
